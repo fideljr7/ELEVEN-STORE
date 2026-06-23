@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nicho | ELEVEN.STORE</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<nav>
+
+    <h2>ELEVEN.STORE</h2>
+
+    <div>
+
+<span style="position: relative; left: -90px;">
+     <a href="#" style="margin-right: 80px;">Inicio</a>
+     <a href="#" style="margin-right: 80px;">Servicios</a>
+     <a href="#">Contacto</a>
+</span>
+
+     
+    </div>
+
+    <div class="icons">
+
+        <span class="carrito-icono">
+
+            🛒
+
+            <span class="contador">
+                0
+            </span>
+
+        </span>
+
+    </div>
+
+</nav>
+
+
+<section class="productos-page">
+<div style="margin-top: -40px;">
+    <h1 style="margin-bottom: 0px;">
+        Perfumes Nicho
+    </h1>
+    <p style="margin-top: -8px;">
+        Perfumes exclusivos creados para quienes valoran lo extraordinario
+    </p>
+    <input
+    type="text"
+    id="buscador"
+    class="buscador"
+    placeholder="🔍 Buscar perfume..."
+    onkeyup="buscarProductos()"> 
+    <select id="filtro-precio" onchange="filtrarPrecio()">
+
+    <option value="todos">
+        Todos los precios
+    </option>
+
+    <option value="300000">
+        Menos de $300.000
+    </option>
+
+    <option value="500000">
+        $300.000 - $500.000
+    </option>
+
+    <option value="500001">
+        Más de $500.000
+    </option>
+
+</select> 
+    <select id="ordenar-productos" onchange="ordenarProductos()">
+
+    <option value="az">
+        Nombre A-Z
+    </option>
+
+    <option value="za">
+        Nombre Z-A
+    </option>
+
+    <option value="menor">
+        Precio menor a mayor
+    </option>
+
+    <option value="mayor">
+        Precio mayor a menor
+    </option>
+
+</select>
+    <p id="contador-productos">
+    12 perfumes encontrados
+</p>
+</div>
+    <div class="contenedor-productos">
+        
+<div class="card">
+    <img src="img/nicho/moncler .jpg">
+    <h3>Moncler Les Sommets</h3>
+    <p>$890.000</p>
+    <button onclick="agregarCarrito('Moncler Les Sommets',890000)">
+        Agregar al carrito</button>
+</div>
+
+<div class="card">
+    <img src="img/nicho/acqua-di-parma.jpg">
+    <h3>Acqua Di Parma</h3>
+    <p>$760.000</p>
+    <button onclick="agregarCarrito('Acqua Di Parma',760000)">
+        Agregar al carrito</button>
+</div>
+
+<div class="card">
+    <img src="img/nicho/carpe-diem.jpg">
+    <h3>Carpe Diem</h3>
+    <p>$680.000</p>
+    <button onclick="agregarCarrito('Carpe Diem',680000)">
+        Agregar al carrito</button>
+</div>
+
+<div class="card">
+    <img src="img/nicho/creed-carmina.jpg">
+    <h3>Creed Carmina</h3>
+    <p>$1.250.000</p>
+    <button onclick="agregarCarrito('Creed Carmina',1250000)">
+        Agregar al carrito</button>
+</div>
+
+<div class="card">
+    <img src="img/nicho/creed-viking.jpg">
+    <h3>Creed Viking</h3>
+    <p>$1.190.000</p>
+    <button onclick="agregarCarrito('Creed Viking',1190000)">
+        Agregar al carrito</button>
+</div>
+
+<div class="card">
+    <img src="img/nicho/creed-wind-flowers.jpg">
+    <h3>Creed Wind Flowers</h3>
+    <p>$1.280.000</p>
+    <button onclick="agregarCarrito('Creed Wind Flowers',1280000)">
+        Agregar al carrito</button>
+</div>
+
+<div class="card">
+    <img src="img/nicho/elixir-88.jpg">
+    <h3>Elixir 88</h3>
+    <p>$720.000</p>
+    <button onclick="agregarCarrito('Elixir 88',720000)">
+        Agregar al carrito</button>
+</div>
+
+<div class="card">
+    <img src="img/nicho/eternal.jpg">
+    <h3>Eternal</h3>
+    <p>$690.000</p>
+    <button onclick="agregarCarrito('Eternal',690000)">
+        Agregar al carrito</button>
+</div>
+
+<div class="card">
+    <img src="img/nicho/mundus.jpg">
+    <h3>Mundus</h3>
+    <p>$740.000</p>
+    <button onclick="agregarCarrito('Mundus',740000)">
+        Agregar al carrito</button>
+</div>
+
+<div class="card">
+    <img src="img/nicho/sospiro-erba-pura.jpg">
+    <h3>Sospiro Erba Pura</h3>
+    <p>$980.000</p>
+    <button onclick="agregarCarrito('Sospiro Erba Pura',980000)">
+        Agregar al carrito</button>
+</div>
+
+<div class="card">
+    <img src="img/nicho/stallion-53.jpg">
+    <h3>Stallion 53</h3>
+    <p>$850.000</p>
+    <button onclick="agregarCarrito('Stallion 53',850000)">
+        Agregar al carrito</button>
+</div>
+
+<div class="card">
+    <img src="img/nicho/vanilla-powder.jpg">
+    <h3>Vanilla Pod</h3>
+    <p>$780.000</p>
+    <button onclick="agregarCarrito('Vanilla Powder',780000)">
+        Agregar al carrito</button>
+</div>
+        
+</div>
+    
+</section>
+
+<!--
+<div class="carrito">
+
+    ...todo el contenido del carrito...
+
+</div>
+-->
+
+<div class="carrito">
+
+    <h2>Tu carrito</h2>
+<button class="cerrar-carrito">
+    Cerrar
+</button>
+    
+ <div class="carrito-contenido">
+
+</div>
+
+<div class="resumen-carrito">
+
+    <p>
+        Subtotal:
+        <span id="subtotal">
+            $0
+        </span>
+    </p>
+
+    <p>
+        Envío:
+        <span id="envio">
+            $20.000
+        </span>
+    </p>
+
+    <h3>
+        Total:
+        <span id="total">
+            $20.000
+        </span>
+    </h3>
+
+    <button class="btn-pagar">
+        Pagar
+    </button>
+    <div class="formulario-envio">
+
+    <input type="text" placeholder="Nombre completo">
+
+    <input type="text" placeholder="Ciudad">
+
+    <input type="text" placeholder="Dirección">
+
+    <input type="text" placeholder="Teléfono">
+
+    <input type="email" placeholder="Correo electrónico">
+    
+<div class="metodos-pago">
+
+    <div class="metodo" onclick="seleccionarMetodo(this)">
+        💳
+        <p>Tarjeta Débito/Crédito</p>
+    </div>
+
+    <div class="metodo" onclick="seleccionarMetodo(this)">
+        🏦
+        <p>PSE</p>
+    </div>
+
+    <div class="metodo" onclick="seleccionarMetodo(this)">
+        🏛️
+        <p>Transferencia Bancaria</p>
+    </div>
+
+</div> <!-- metodos-pago -->
+
+</div> <!-- formulario-envio -->
+
+</div> <!-- resumen-carrito -->
+
+</div> <!-- carrito -->
+
+<div id="notificacion"></div>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
