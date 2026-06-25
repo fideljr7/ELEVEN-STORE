@@ -469,3 +469,113 @@ function eliminarProducto(index){
     actualizarCarrito();
 
 }
+function registrarUsuario(){
+
+    const nombre =
+    document.getElementById('nombre').value;
+
+    const correo =
+    document.getElementById('correo').value;
+
+    const password =
+    document.getElementById('password').value;
+
+    if(
+        nombre === '' ||
+        correo === '' ||
+        password === ''
+    ){
+
+        alert('Completa todos los campos.');
+
+        return;
+
+    }
+
+    alert(
+        'Usuario registrado correctamente.'
+    );
+
+}
+function iniciarSesion(){
+
+    const correo =
+    document.getElementById('loginCorreo').value;
+
+    const password =
+    document.getElementById('loginPassword').value;
+
+    if(
+        correo === '' ||
+        password === ''
+    ){
+
+        alert('Completa todos los campos.');
+
+        return;
+
+    }
+
+    if(
+        correo === 'fidel@email.com' &&
+        password === '123456'
+    ){
+
+        sessionStorage.setItem(
+            'usuario',
+            'Fidel Junior'
+        );
+
+        window.location.href =
+        'index.html';
+
+        return;
+
+    }
+
+    if(
+        correo === 'prueba@email.com' &&
+        password === '654321'
+    ){
+
+        sessionStorage.setItem(
+            'usuario',
+            'Usuario Prueba'
+        );
+
+        window.location.href =
+        'index.html';
+
+        return;
+
+    }
+
+    alert(
+        'Correo o contraseña incorrectos.'
+    );
+
+}
+
+const usuarioActivo =
+document.getElementById('usuarioActivo');
+
+const usuarioLogueado =
+sessionStorage.getItem('usuario');
+
+if(
+    usuarioActivo &&
+    usuarioLogueado
+){
+
+    usuarioActivo.innerText =
+    usuarioLogueado;
+
+}
+function cerrarSesion(){
+
+    sessionStorage.removeItem('usuario');
+
+    window.location.href =
+    'login.html';
+
+}
