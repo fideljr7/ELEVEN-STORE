@@ -1,3 +1,25 @@
+const perfumes = [
+
+    {
+        nombre: "212 Men NYC",
+        precio: 320000,
+        categoria: "hombre"
+    },
+
+    {
+        nombre: "Dior Sauvage",
+        precio: 450000,
+        categoria: "hombre"
+    },
+
+    {
+        nombre: "Bleu de Chanel",
+        precio: 520000,
+        categoria: "hombre"
+    }
+
+];
+
 const carritoIcono =
 document.querySelector('.carrito-icono');
 
@@ -577,5 +599,17 @@ function cerrarSesion(){
 
     window.location.href =
     'login.html';
+
+}
+const contadorProductos =
+document.getElementById(
+    'contador-productos'
+);
+
+if(contadorProductos){
+
+    contadorProductos.innerText =
+    perfumes.length +
+    ' perfumes encontrados';
 
 }
