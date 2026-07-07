@@ -1,0 +1,112 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%
+    if (session.getAttribute("usuario") == null) {
+        response.sendRedirect("login.html");
+        return;
+    }
+%>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ELEVEN.STORE</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" 
+    href="css/style.css">
+
+</head>
+
+<body>
+
+<nav>
+
+    <h2>ELEVEN.STORE</h2>
+<div class="nav-links">
+
+    <a href="index_respaldo.html">
+        Inicio
+    </a>
+
+    <input
+    type="text" id="buscador" 
+    class="buscador" placeholder="Buscar perfume..."> 
+    
+
+    <a href="#footer">
+        Contacto
+    </a>
+
+    <a href="logout" class="btn-logout">
+    Cerrar sesión
+</a>
+
+</div>
+
+    <div class="icons">
+
+        <span class="carrito-icono">
+
+            🛒
+
+            <span class="contador">
+                0
+            </span>
+
+        </span>
+
+    </div>
+
+</nav>
+
+<section class="hero">
+
+    <h1>
+        ELEVEN.STORE
+    </h1>
+
+    <p>
+        Fragancias premium para quienes dejan huella.
+    </p>
+
+    <div class="hero-buttons">
+
+        <a href="productos.html">
+
+           <button
+               onclick="window.location.href='productos.html'">
+
+    Explorar colección
+           </button>
+    </a>
+    </div>
+
+</section>
+    
+<footer id="footer">
+
+    <h3>ELEVEN.STORE</h3>
+
+    <p>
+        Perfumes premium y exclusivos
+    </p>
+
+    <p>
+        © 2026 Todos los derechos reservados
+    </p>
+
+</footer>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

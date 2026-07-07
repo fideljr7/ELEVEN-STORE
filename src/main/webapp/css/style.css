@@ -359,7 +359,19 @@ button:hover{
 
 }
 
+.btn-logout{
+    background: #C200A5;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
 
+.btn-logout:hover{
+    background: #9b0085;
+}
 
 .btn-secundario{
 
@@ -1127,3 +1139,16 @@ footer p{
     color: white;
 
 }
+  
+  .mi-enlace {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s; 
+  }
+
+  .mi-enlace:hover {
+    color: #C200A5;  
+  }
+  
+
+

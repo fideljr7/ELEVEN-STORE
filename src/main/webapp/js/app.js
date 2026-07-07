@@ -610,6 +610,12 @@ if(contadorProductos){
 
     contadorProductos.innerText =
     perfumes.length +
-    ' perfumes encontrados';
+    'perfumes encontrados';
 
+}
+
+const inputBuscador = document.getElementById('buscador');
+
+if (inputBuscador) {
+    inputBuscador.addEventListener('input', buscarProductos);
 }

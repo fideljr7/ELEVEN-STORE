@@ -20,10 +20,13 @@
 </head>
 
 <body>
-
+    
+       
 <div class="auth-container">
 
     <div class="auth-box">
+    
+<form action="/Eleven.Store/registro" method="post"> 
 
         <h1>Crear Cuenta</h1>
 
@@ -31,18 +34,34 @@
             Regístrate para continuar.
         </p>
 
-        <input id="nombre" type="text" placeholder="Nombre completo">
+<input
+type="text"
+name="nombre"
+placeholder="Nombre completo"
+required>
 
-<input id="correo" type="email" placeholder="Correo electrónico">
+<input
+type="email"
+name="correo"
+placeholder="Correo electrónico"
+required>
 
-<input id="password" type="password" placeholder="Contraseña"> 
+<input
+type="text"
+name="usuario"
+placeholder="Nombre de usuario"
+required>
+
+<input
+type="password"
+name="password"
+placeholder="Contraseña"
+required>
 
         
-
-            <button onclick="registrarUsuario()">
+           <button type="submit">
     Registrarse
 </button>
-
 
         <span>
 
@@ -54,6 +73,8 @@
 
         </span>
 
+</form>
+    
     </div>
 
 </div>
